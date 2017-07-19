@@ -41,6 +41,8 @@ These are some game decisions that can be made (and maybe can be changed):
 
 # Implementation
 
+## Components 
+
 Each of these components might be justified for having their own set of folders and their own set of tests.
 
 - [ ] Chatroom-style websockets for handling gameboards and user interactions
@@ -48,5 +50,17 @@ Each of these components might be justified for having their own set of folders 
 - [ ] Wikipedia API for getting solution phrases
 - [ ] General utilities
 - [ ] Front-end HTML page for connecting to server
+
+## **signposts** and **users**
+
+A **signpost** is just an unactivated user that does not move and always shares.
+
+## Sharing information
+
+Users have a On / Off button for sharing information. If On, they will recieve information from other Users who also have their sharing set to On, when they are within their local zone.
+
+## New users
+
+When a new user enters, they basically are given control of a **signpost**. That is, they start in the position of the **signpost**, and they get the information that the **signpost** has.
 
 

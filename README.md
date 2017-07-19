@@ -39,4 +39,13 @@ These are some game decisions that can be made (and maybe can be changed):
 - Information is the page name? OR information is a random fact on the given page?
 - Should a radar be added to help bolster user-finding (to make it easier than signpost finding to encourage sharing)?
 
+# Implementation
+
+Each of these components might be justified for having their own set of folders and their own set of tests.
+
+- [ ] Chatroom-style websockets for handling gameboards and user interactions
+- [ ] Maze generation for the gameboard
+- [ ] Wikipedia API for getting solution phrases
+- [ ] General utilities
+
 

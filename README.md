@@ -47,5 +47,6 @@ Each of these components might be justified for having their own set of folders 
 - [ ] Maze generation for the gameboard
 - [ ] Wikipedia API for getting solution phrases
 - [ ] General utilities
+- [ ] Front-end HTML page for connecting to server
 
 

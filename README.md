@@ -46,7 +46,7 @@ These are some game decisions that can be made (and maybe can be changed):
 Each of these components might be justified for having their own set of folders and their own set of tests.
 
 - [ ] Chatroom-style websockets for handling gameboards and user interactions
-- [ ] Maze generation for the gameboard
+- [ ] Gameboard (maze generation, API for getting/setting position, radar)
 - [ ] Wikipedia API for getting solution phrases
 - [ ] General utilities
 - [ ] Front-end HTML page for connecting to server

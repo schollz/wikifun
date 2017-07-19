@@ -8,27 +8,23 @@ You are given a Wikipedia page. Your page is linked to by another page that is h
 
 ## Basic idea
 
-User goes to webpage and enters a round of play. Each round of play is 60 minutes. User is given a simple avatar and put on game board (80 x 80 grid). The game board has walls which hide spaces behind them, but otherwise you can see the section of grid they are in (10 x 10) out of entire map.
+User goes to webpage and enters a round of play. Each round of play is 60 minutes. User is given a simple avatar and put on **game board** (80 x 80 grid with simple maze). The game board has walls which hide spaces behind them, but otherwise you can see the section of grid they are in (10 x 10) out of entire map.
 
-User is given the number of letters for the **solution phrase** e.g. `_ _ _ _`. The solution phrase is a Wikipedia page. The goal is to guess the solution phrase before your opponents do. Lets say, in this example, the solution phrase is `C A T S`.
+User is given the number of letters for the **solution phrase** e.g. `_ _ _ `. The solution phrase is a Wikipedia page, in this example the answer is "cat". The goal is to guess the solution phrase before your opponents do. 
 
-User is also given a Wikipedia page that linked *from the page of the solution phrase*. For example, for the solution phrase "CATS", the User is given the title of a page that linked *from* from the Wikipedia page for "CATS", e.g. the user would get either "carnivorous", "mammal", "feline", or "vermin." 
+User is also given one piece of **information**: a Wikipedia page that linked *from the page of the solution phrase*. For example, for the solution phrase "cat", the User is given the title of a page that linked *from* from the Wikipedia page for "cat", e.g. "carnivorous", "mammal", "feline", or "vermin." 
 
-User tries to guess the solution phrase using their information (e.g. by reading their wikipedia page and thinking about what pages linked to it) or they can **explore** the game board to find more information. 
-
-Exploration occurs by moving around the game board. Users see one another on the board, and they also see **signposts**. Users can interact with another user *or* the signpost. When interacting with a **signpost** the User gains **information**. When interacting with a different user, the User gains **information** if both users mutually agree to divulge **information**.
-
-**Information** can either be the page name from the wikipedia page, e.g. "vermin" (which links from "Cats"), or it can be some fact from the page, e.g. "The term is used to refer to a wide scope of organisms, including rodents, cockroaches, fleas, termites, lice, bed bugs and white ants." (which is a fact on the page for "vermin" that links to "cats"). With enough information, you may gather enough words to figure out what the solution phrase is.
+The User can **explore** the game board in order to acquire more information (they can also read the Wikipedia page which might give clues to solve the solution phrase). Exploration occurs by moving around a simple maze in a game board. During exploration, Users can choose to Share or to Not Share. If a User sees another User and they both are choosing to Share, then they automatically exchange information. The game board also includes "signposts" (essentially not-yet-activated users) that always share information once in view.
 
 ## Strategy
 
-Their are three inherent strategies: (1) explore the game board fastest to find all the signposts to get information, without revealing any information you have, or (2) interact with as many users as you can to gain information (while revealing your own) in order to guess fastest, or (3) read the given wikipedia page you have recieved and try to make your best guess of what the solution phrase is that linked to it.
+Their are three inherent strategies: 
 
-(1) is a good strategy if you have been given particularly revealing information.
+1. Explore the game board fastest to find all the signposts to get information, without revealing any information you have,
+2. Interact with as many users as you can to gain information (while revealing your own) in order to guess fastest,
+3. Read the given Wikipedia page you have received and try to make your best guess of what the solution phrase is that linked to it.
 
-(2) is a good strategy if the information you have is not very good. 
-
-(3) is a good strategy if you think you are good at parsing information, or if it is something you are particularly well-versed in or good at researching.
+(1) is a good strategy if you have been given particularly revealing information. (2) is a good strategy if the information you have is not very good.  (3) is a good strategy if you think you are good at parsing information, or if it is something you are particularly well-versed in or good at researching.
 
 # Decisions
 
@@ -50,17 +46,12 @@ Each of these components might be justified for having their own set of folders 
 - [ ] Wikipedia API for getting solution phrases
 - [ ] General utilities
 - [ ] Front-end HTML page for connecting to server
+- [ ] Leaderboard
 
-## **signposts** and **users**
+## Users and signposts
 
-A **signpost** is just an unactivated user that does not move and always shares.
-
+A signpost is just an unactivated user that does not move and always shares, even if the interacting user is not sharing. When a new user enters, they basically are given control of a signpost. That is, they start in the position of the signpost, and they get the information that the signpost has.
+ 
 ## Sharing information
 
-Users have a On / Off button for sharing information. If On, they will recieve information from other Users who also have their sharing set to On, when they are within their local zone.
-
-## New users
-
-When a new user enters, they basically are given control of a **signpost**. That is, they start in the position of the **signpost**, and they get the information that the **signpost** has.
-
-
+Users have a On / Off button for sharing information. If On, they will receive information from other Users who also have their sharing set to On, when they are within their local zone. Information from signposts is always shared, regardless of the User setting.

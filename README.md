@@ -34,9 +34,9 @@ Their are three inherent strategies: (1) explore the game board fastest to find 
 
 These are some game decisions that can be made (and maybe can be changed):
 
-- During interaction, random information is shared (encourages strategy swapping)? OR user specifies the information that is shared?
-- User can share information learned from interaction? OR User can only share their information given at the beginning of the game?
-- Information is the page name? OR information is a random fact on the given page?
+- During interaction, random information is shared (encourages strategy swapping)? OR user specifies the information that is shared? ZACK: For starters, user only shares their given information.
+- User can share information learned from interaction? OR User can only share their information given at the beginning of the game? ZACK: For starters, user only can share the information gained at beginning.
+- Information is the page name? OR information is a random fact on the given page? ZACK: For starters, information is the page name.
 - Should a radar be added to help bolster user-finding (to make it easier than signpost finding to encourage sharing)?
 
 # Implementation
